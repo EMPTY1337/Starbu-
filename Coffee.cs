@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace i02_1_TemplateMethod
+namespace Starbu__
 {
-    class Coffee
+    class Coffee : CaffeineBeverage
     {
-        public void prepareRecipe()
-        {
+        public override void prepareRecipe()
+        {  
             boilWater();
             brewCoffeeGrinds();
             pourInCup();
@@ -21,19 +21,12 @@ namespace i02_1_TemplateMethod
             Console.WriteLine("Adding Sugar and Milk");
         }
 
-        private void pourInCup()
-        {
-            Console.WriteLine("Pouring into cup");
-        }
-
+       
         private void brewCoffeeGrinds()
         {
             Console.WriteLine("Dripping coffee through filter");
         }
 
-        private void boilWater()
-        {
-            Console.WriteLine("Boiling water");
-        }
+        
     }
 }

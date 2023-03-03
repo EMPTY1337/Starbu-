@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace i02_1_TemplateMethod
+namespace Starbu__
 {
-    class Tea
+    class Tea : CaffeineBeverage
     {
-        public void prepareRecipe()
+        public override void prepareRecipe()
         {
             boilWater();
             steepTeaBag();
@@ -21,19 +21,11 @@ namespace i02_1_TemplateMethod
             Console.WriteLine("Adding lemon");
         }
 
-        private void pourInCup()
-        {
-            Console.WriteLine("Pouring into cup");
-        }
-
         private void steepTeaBag()
         {
             Console.WriteLine("Steeping the tea");
         }
 
-        private void boilWater()
-        {
-            Console.WriteLine("Boiling water");
-        }
+     
     }
 }
