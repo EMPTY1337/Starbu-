@@ -8,24 +8,15 @@ namespace Starbu__
 {
     class Tea : CaffeineBeverage
     {
-        public override void prepareRecipe()
-        {
-            boilWater();
-            steepTeaBag();
-            pourInCup();
-            addLemon();
-        }
-
-        private void addLemon()
-        {
-            Console.WriteLine("Adding lemon");
-        }
-
-        private void steepTeaBag()
+        public override void brew()
         {
             Console.WriteLine("Steeping the tea");
         }
+        public override void addCondiments()
+        {
+            Console.WriteLine("Adding Lemon");
 
-     
+        }
+
     }
 }

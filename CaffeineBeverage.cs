@@ -6,8 +6,16 @@ namespace Starbu__
 {
     public abstract class CaffeineBeverage
     {
-        public abstract void prepareRecipe();
-        
+        public virtual void prepareRecipe()
+        {
+            boilWater();
+            brew();
+            pourInCup();
+            addCondiments();
+        }
+        public abstract void brew();
+        public abstract void addCondiments();
+
         public void boilWater()
         {
             Console.WriteLine("Boiling water");

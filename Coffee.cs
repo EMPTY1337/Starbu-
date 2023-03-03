@@ -8,25 +8,15 @@ namespace Starbu__
 {
     class Coffee : CaffeineBeverage
     {
-        public override void prepareRecipe()
-        {  
-            boilWater();
-            brewCoffeeGrinds();
-            pourInCup();
-            addSugarAndMilk();
-        }
 
-        private void addSugarAndMilk()
-        {
-            Console.WriteLine("Adding Sugar and Milk");
-        }
-
-       
-        private void brewCoffeeGrinds()
+        public override void brew()
         {
             Console.WriteLine("Dripping coffee through filter");
         }
+        public override void addCondiments()
+        {
+            Console.WriteLine("Adding Sugar and Milk");
 
-        
+        }
     }
 }
